@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+  
   def top
   end
 
@@ -6,5 +7,11 @@ class StaticPagesController < ApplicationController
   end
 
   def canvas
+  end
+
+  def result
+  end
+
+  def gallery
   end
 end
