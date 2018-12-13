@@ -1,24 +1,9 @@
-# README
+# Tappitsu
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Tappitsuは書き初めをスマホで行なうWebアプリです。
+達筆と"Tap"がかかってますが、実際はTapではなくSwipeで文字を書きます。
 
-Things you may want to cover:
+## ライセンス
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[*Ruby on Rails チュートリアル*](https://railstutorial.jp/)
+を参照しながら作成しました。
