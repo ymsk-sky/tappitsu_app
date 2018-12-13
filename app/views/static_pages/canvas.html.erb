@@ -1,1 +1,9 @@
-<%= link_to "完成", result_path, class: "btn" %>
+<canvas id="draw-area" width="300" height="400">HTML5非対応</canvas>
+<%= form_for @picture do |f| %>
+  <%= f.hidden_field :image_url, value: '' %>
+<% end %>
+<span id="save-button">保存</span>
+
+<%= link_to "完成", result_path, class: "btn btn-lg btn-primary" %>
+<input id="delete_button" type="button" value="やり直す" />
+<%= link_to "やり直す", canvas_path, class: "btn btn-lg btn-primary" %>
