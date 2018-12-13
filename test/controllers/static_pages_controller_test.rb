@@ -2,33 +2,33 @@ require 'test_helper'
 
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
 
-  test "should get root" do
-    get root_url
-    assert_response :success
-  end
-
   test "should get top" do
-    get static_pages_top_url
+    get root_path
     assert_response :success
   end
 
   test "should get ready" do
-    get static_pages_ready_url
+    get ready_path
     assert_response :success
   end
 
   test "should get canvas" do
-    get static_pages_canvas_url
+    get canvas_path
     assert_response :success
   end
 
   test "should get result" do
-    get static_pages_result_url
+    get result_path
     assert_response :success
   end
 
   test "should get gallery" do
-    get static_pages_gallery_url
+    get gallery_path
+    assert_response :success
+  end
+
+  test "should get contact" do
+    get contact_path
     assert_response :success
   end
 end

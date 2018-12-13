@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
   root 'static_pages#top'
 
-  get 'static_pages/top'
-  get 'static_pages/ready'
-  get 'static_pages/canvas'
-  get 'static_pages/result'
-  get 'static_pages/gallery'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/ready', to: 'static_pages#ready'
+  get '/canvas', to: 'static_pages#canvas'
+  get '/result', to: 'static_pages#result'
+  get '/gallery', to: 'static_pages#gallery'
+  get '/contact', to: 'static_pages#contact'
 end

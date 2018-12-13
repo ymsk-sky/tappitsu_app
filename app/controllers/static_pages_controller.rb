@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  
+
   def top
   end
 
@@ -13,5 +13,8 @@ class StaticPagesController < ApplicationController
   end
 
   def gallery
+  end
+
+  def contact
   end
 end
