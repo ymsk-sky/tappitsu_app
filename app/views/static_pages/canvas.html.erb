@@ -13,3 +13,8 @@
 <input id="delete_button" type="button" value="やり直す" />
 <%= link_to "やり直す", canvas_path, id: "delete_button",
                                   class: "btn btn-lg btn-primary"%>
+
+<div class="name_checkbox">
+	<%= check_box_tag :auto_name %>
+	<%= label_tag :auto_name, "名前を入れる" %>
+</div>
