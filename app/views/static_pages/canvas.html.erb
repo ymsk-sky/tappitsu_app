@@ -11,4 +11,5 @@
 
 <%= link_to "完成", result_path, class: "btn btn-lg btn-primary" %>
 <input id="delete_button" type="button" value="やり直す" />
-<%= link_to "やり直す", canvas_path, class: "btn btn-lg btn-primary" %>
+<%= link_to "やり直す", canvas_path, id: "delete_button",
+                                  class: "btn btn-lg btn-primary"%>
