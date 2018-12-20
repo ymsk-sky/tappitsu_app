@@ -1,3 +1,14 @@
 <h1>テーマ選択</h1>
 <p>書くテーマを選んでください。</p>
 <%= link_to "はじめる", canvas_path, class: "btn btn-lg btn-primary" %>
+
+<form action=<%= canvas_path %> method="GET">
+  <input type="text" name="get_name">
+  <input type="submit" value="GET送信">
+</form>
+
+<%= form_tag(canvas_path, method: "GET") do %>
+  <%= label_tag("お名前") %>
+  <%= text_field_tag(:user_name) %>
+  <%= submit_tag("GET!") %>
+<% end %>

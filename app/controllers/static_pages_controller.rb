@@ -7,6 +7,7 @@ class StaticPagesController < ApplicationController
   end
 
   def canvas
+    @user_name = params[:user_name]
   end
 
   def result
