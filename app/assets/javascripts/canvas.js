@@ -11,7 +11,7 @@
     //キャンバスの背景カラーを決定。 fillRectは長方形に塗るメソッド
     var ctx = canvas.getContext('2d');
     ctx.beginPath();
-    ctx.fillStyle = "#f5f5f5";
+    ctx.fillStyle = "#FFF";
     ctx.fillRect(0, 0, 700, 400);
 
     //初期値（サイズ、色、アルファ値）の決定
@@ -113,10 +113,20 @@
 })();
 
 function test_checked(ischecked) {
-    if(ischecked) {
-        alert("checked!!");
-    }
-    else {
-        alert("NON");
-    }
+  var name = document.getElementById('html_check').value;
+  var canvas = document.getElementById('draw-area');
+  var ctx = canvas.getContext('2d');
+
+  if(ischecked) {
+    ctx.lineWidth = 2;
+    ctx.fillStyle = "#000";
+    ctx.font = "50px cursive";
+    ctx.fillText(name, 15, 65);
+  }
+  else {
+    ctx.lineWidth = 2;
+    ctx.fillStyle = "#FFF";
+    ctx.font = "50px cursive";
+    ctx.fillText(name, 15, 65);
+  }
 }

@@ -1,23 +1,31 @@
-<style>
-  #draw-area {
-    background: #F1F1F1;
-  }
-</style>
+<p><%= @user_name %>様</p>
 
-<%= @user_name %>様
-
-<canvas id="draw-area" width="300" height="400">HTML5非対応</canvas>
-<span id="save-button">保存</span>
-
-<%= link_to "完成", result_path, class: "btn btn-lg btn-primary" %>
-<input id="delete_button" type="button" value="やり直す" />
-<%= link_to "やり直す", canvas_path, id: "delete_button",
-                                  class: "btn btn-lg btn-primary"%>
+<div class="canvas-area">
+  <canvas id="draw-area" width="300" height="400">HTML5非対応</canvas>
+</div>
 
 <div class="name_checkbox">
-	<%= check_box_tag(:auto_name, checked = true, {onclick: "alert('erb test')" }) %>
+	<%= check_box_tag(:auto_name, checked = true,
+                                    {onclick: "alert('erb test')" }) %>
 	<%= label_tag :auto_name, "名前を入れる" %>
 </div>
 
-<input type="checkbox" id="html_check" onclick="test_checked(this.checked);">
-<input type="checkbox" id="tmp" onclick=alert("test");>
+<div>
+  <input type="checkbox" id="html_check"
+            onclick="test_checked(this.checked);" value="<%= @user_name %>">
+  <label for="html_check">名前を入れる</label>
+</div>
+
+<div>
+  <input type="checkbox" id="tmp" onclick=alert("test");>
+  <label for="tmp">test</label>
+</div>
+
+<div class="buttons">
+  <span id="save-button">保存</span>
+
+  <%= link_to "完成", result_path, class: "btn btn-lg btn-primary" %>
+  <input id="delete_button" type="button" value="やり直す" />
+  <%= link_to "やり直す", canvas_path, id: "delete_button",
+                                    class: "btn btn-lg btn-primary"%>
+</div>
