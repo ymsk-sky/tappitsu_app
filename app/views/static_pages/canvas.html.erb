@@ -15,6 +15,9 @@
                                   class: "btn btn-lg btn-primary"%>
 
 <div class="name_checkbox">
-	<%= check_box_tag :auto_name %>
+	<%= check_box_tag(:auto_name, checked = true, {onclick: "alert('erb test')" }) %>
 	<%= label_tag :auto_name, "名前を入れる" %>
 </div>
+
+<input type="checkbox" id="html_check" onclick="test_checked(this.checked);">
+<input type="checkbox" id="tmp" onclick=alert("test");>

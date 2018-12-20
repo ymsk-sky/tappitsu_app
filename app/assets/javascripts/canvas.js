@@ -111,3 +111,12 @@
         }
     }
 })();
+
+function test_checked(ischecked) {
+    if(ischecked) {
+        alert("checked!!");
+    }
+    else {
+        alert("NON");
+    }
+}
