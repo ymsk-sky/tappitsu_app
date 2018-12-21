@@ -120,13 +120,15 @@ function test_checked(ischecked) {
   if(ischecked) {
     ctx.lineWidth = 2;
     ctx.fillStyle = "#000";
-    ctx.font = "50px cursive";
+    ctx.font = "50px 'HGP行書体'";
     ctx.fillText(name, 15, 65);
   }
   else {
     ctx.lineWidth = 2;
     ctx.fillStyle = "#FFF";
-    ctx.font = "50px cursive";
+    ctx.font = "50px 'HGP行書体'";
     ctx.fillText(name, 15, 65);
+    ctx.strokeStyle = "white";
+    ctx.strokeText(name, 15, 65);
   }
 }
