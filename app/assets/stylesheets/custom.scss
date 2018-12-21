@@ -1,6 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* font */
+@font-face {
+  font-family: 'kouzan';
+  src: font-url('KouzanGyoushoOTF.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
@@ -9,6 +17,7 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 60px;
+  font-family: 'kouzan';
 }
 
 section {
