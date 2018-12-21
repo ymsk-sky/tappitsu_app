@@ -140,3 +140,16 @@ function clear_draw_area() {
 
   document.getElementById("name_check").checked = false;
 }
+
+function save_picture() {
+  var canvas = document.getElementById('draw-area');
+  var url = canvas.toDataURL();
+  document.getElementById('picture_image_url').value = url;
+  document.getElementById('save_result').submit();
+
+  // 保存ボタン押下時にhiddenフィールドに画像のURLを持たせ、Postアクションを呼ぶ
+  // $("#save-button").click ->
+  //   url = canvas[0].toDataURL()
+  //   $("#picture_image_url").val(url)
+  //   $("#new_picture").submit()
+}

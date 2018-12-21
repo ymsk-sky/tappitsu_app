@@ -4,6 +4,11 @@
   <canvas id="draw-area" width="300" height="400">HTML5非対応</canvas>
 </div>
 
+<form id="save_result" action=<%= result_path %> method="GET">
+  <input type="hidden" id="picture_image_url" value="">
+</form>
+<input type="button" id="save_button" value="完成" onclick="save_picture();">
+
 <div>
   <input type="checkbox" id="name_check"
             onclick="name_checked(this.checked);" value="<%= @user_name %>">
@@ -11,6 +16,5 @@
 </div>
 
 <div class="buttons">
-  <%= link_to "完成", result_path, class: "btn btn-lg btn-primary" %>
   <input type="button" value="やり直す" onclick="clear_draw_area();">
 </div>
