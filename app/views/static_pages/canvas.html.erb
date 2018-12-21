@@ -4,28 +4,13 @@
   <canvas id="draw-area" width="300" height="400">HTML5非対応</canvas>
 </div>
 
-<div class="name_checkbox">
-	<%= check_box_tag(:auto_name, checked = true,
-                                    {onclick: "alert('erb test')" }) %>
-	<%= label_tag :auto_name, "名前を入れる" %>
-</div>
-
 <div>
-  <input type="checkbox" id="html_check"
-            onclick="test_checked(this.checked);" value="<%= @user_name %>">
-  <label for="html_check">名前を入れる</label>
-</div>
-
-<div>
-  <input type="checkbox" id="tmp" onclick=alert("test");>
-  <label for="tmp">test</label>
+  <input type="checkbox" id="name_check"
+            onclick="name_checked(this.checked);" value="<%= @user_name %>">
+  <label for="name_check">名前を入れる</label>
 </div>
 
 <div class="buttons">
-  <span id="save-button">保存</span>
-
   <%= link_to "完成", result_path, class: "btn btn-lg btn-primary" %>
-  <input id="delete_button" type="button" value="やり直す" />
-  <%= link_to "やり直す", canvas_path, id: "delete_button",
-                                    class: "btn btn-lg btn-primary"%>
+  <input type="button" value="やり直す" onclick="clear_draw_area();">
 </div>

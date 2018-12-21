@@ -112,23 +112,31 @@
     }
 })();
 
-function test_checked(ischecked) {
-  var name = document.getElementById('html_check').value;
+function name_checked(ischecked) {
+  var name = document.getElementById('name_check').value;
   var canvas = document.getElementById('draw-area');
   var ctx = canvas.getContext('2d');
 
   if(ischecked) {
     ctx.lineWidth = 2;
     ctx.fillStyle = "#000";
-    ctx.font = "50px 'HGP行書体'";
+    ctx.font = "50px kouzan";
     ctx.fillText(name, 15, 65);
   }
   else {
     ctx.lineWidth = 2;
     ctx.fillStyle = "#FFF";
-    ctx.font = "50px 'HGP行書体'";
+    ctx.font = "50px kouzan";
     ctx.fillText(name, 15, 65);
     ctx.strokeStyle = "white";
     ctx.strokeText(name, 15, 65);
   }
+}
+
+function clear_draw_area() {
+  var canvas = document.getElementById('draw-area');
+  var ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  document.getElementById("name_check").checked = false;
 }
